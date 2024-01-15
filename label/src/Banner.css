@@ -42,13 +42,13 @@ body {
 }
 
 .magImage .colorOverlay {
-    background-color: rgb(105, 255, 243);
+    background-color: rgb(54, 243, 117);
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     opacity: 1;
-    mix-blend-mode:exclusion;
+    mix-blend-mode: exclusion;
 }
 
 .magHead {
@@ -63,6 +63,7 @@ body {
 }
 
 .magHeadline {
+
     font-family: "Inter", sans-serif;
     color: beige;
     font-size: 13vmax;
@@ -72,18 +73,21 @@ body {
     align-items: flex-end;
     letter-spacing: -0.08em;
     height: 18vmax;
-    animation: slideIn 1s ease-out; /* Add the animation property */
+    animation: slideIn 1s ease-out;
+    /* Add the animation property */
 }
 
 @keyframes slideIn {
-  from {
-    transform: translateY(-100px); /* Initial position, adjust as needed */
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+    from {
+        transform: translateY(-100px);
+        /* Initial position, adjust as needed */
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 
 }
 
@@ -100,6 +104,7 @@ body {
 .magHeadline .sm {
     line-height: 1.2;
 }
+
 .magHeadline .sm_initial {
     line-height: 1.2;
     margin: 0px 0px 0px 0px
@@ -125,15 +130,17 @@ body {
     text-align: right;
     gap: 5vmax;
 }
+
 .lateralBar {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     width: 300px;
-    background-color: #333; 
+    background-color: rgb(248, 60, 26);
+    animation: lava 10s linear infinite;
 
-  }
+}
 
 @media (max-width: 1080px) {
     .magHead {
@@ -147,7 +154,8 @@ body {
     .magHeadline .sm {
         line-height: 0.8;
     }
-    .magHeadline .up{
+
+    .magHeadline .up {
 
         padding-bottom: 36px;
     }
@@ -157,15 +165,17 @@ body {
         margin-top: 0;
         padding-top: 15px;
     }
-    .lateralBar{
+
+    .lateralBar {
         width: 160px;
     }
+
     .magSub {
         margin-top: 5vmax;
         display: block;
         letter-spacing: -15px;
 
-    }    
+    }
 
 }
 
@@ -183,4 +193,16 @@ strong {
     max-width: 256px;
     width: 100%;
     line-height: 1.9;
+}
+
+
+@keyframes lava {
+    0% {
+        filter: brightness(20deg);
+    }
+
+
+    100% {
+        filter:brightness(360deg);
+    }
 }
