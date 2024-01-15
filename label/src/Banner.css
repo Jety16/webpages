@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:wght@600&display=swap');
+
+* {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.magCover {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media (max-width: 30em) {
+    .magCover {
+        height: 89.75vh;
+    }
+}
+
+.magImage {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.magImage img {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    filter: blur(5px);
+    object-fit: cover;
+    opacity: 1;
+}
+
+.magImage .colorOverlay {
+    background-color: rgb(105, 255, 243);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    mix-blend-mode:exclusion;
+}
+
+.magHead {
+    padding: 0vmax 1vmax;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    left: 0;
+    right: 0;
+    top: 0;
+    flex-wrap: wrap;
+}
+
+.magHeadline {
+    font-family: "Inter", sans-serif;
+    color: beige;
+    font-size: 13vmax;
+    font-weight: 600;
+    line-height: 0.99;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -0.08em;
+    height: 18vmax;
+    animation: slideIn 1s ease-out; /* Add the animation property */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100px); /* Initial position, adjust as needed */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+
+.magHeadline .up {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.magHeadline .sm {
+    line-height: 1.2;
+}
+.magHeadline .sm_initial {
+    line-height: 1.2;
+    margin: 0px 0px 0px 0px
+}
+
+.magHeadline .sub {
+    font-family: "Fjalla One", sans-serif;
+    font-size: 3vmax;
+    text-transform: uppercase;
+    color: beige;
+    margin-top: -18px;
+    letter-spacing: -0.02em;
+    text-shadow: 2px 2px 40px rgba(65, 20, 20, 0.5);
+    line-height: 0.3;
+    width: 100%;
+}
+
+.magSub {
+    max-width: 256px;
+    width: 100%;
+    font-size: 0.675rem;
+    display: inline;
+    text-align: right;
+    gap: 5vmax;
+}
+.lateralBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: #333; 
+
+  }
+
+@media (max-width: 1080px) {
+    .magHead {
+        padding: 10vmax 1vmax;
+    }
+
+    .magHeadline {
+        font-size: 16vmax;
+    }
+
+    .magHeadline .sm {
+        line-height: 0.8;
+    }
+    .magHeadline .up{
+
+        padding-bottom: 36px;
+    }
+
+    .magHeadline .sub {
+
+        margin-top: 0;
+        padding-top: 15px;
+    }
+    .lateralBar{
+        width: 160px;
+    }
+    .magSub {
+        margin-top: 5vmax;
+        display: block;
+        letter-spacing: -15px;
+
+    }    
+
+}
+
+
+strong {
+    font-weight: 700;
+}
+
+.magCaption {
+    margin: 2vmax;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.7rem;
+    max-width: 256px;
+    width: 100%;
+    line-height: 1.9;
+}
