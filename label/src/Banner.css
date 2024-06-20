@@ -42,7 +42,7 @@ body {
 }
 
 .magImage .colorOverlay {
-    background-color: rgb(54, 243, 117);
+    background-color: rgb(73, 48, 112);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -137,7 +137,7 @@ body {
     left: 0;
     bottom: 0;
     width: 300px;
-    background-color: rgb(248, 60, 26);
+    background-color: #bb92af;
     animation: lava 10s linear infinite;
 
 }
@@ -189,6 +189,7 @@ strong {
     position: absolute;
     bottom: 0;
     right: 0;
+    color:white;
     font-size: 0.7rem;
     max-width: 256px;
     width: 100%;
@@ -206,3 +207,20 @@ strong {
         filter:brightness(360deg);
     }
 }
+
+.arrowButton {
+    position: absolute;
+    top: 125%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .arrowButton:hover {
+    transform: translateY(-50%) scale(1.2);
+  }
+  

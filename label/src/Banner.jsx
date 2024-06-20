@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Banner.css';
-
+import Description from './Description';
 
 const Banner = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleComponent = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="magCover">
-      <div className="lateralBar">
-
-      </div>
+      <div className="lateralBar"></div>
       <div className="magImage">
         <img
           src='./fondo4.jpeg'
@@ -16,29 +20,31 @@ const Banner = () => {
         />
         <div className="colorOverlay"></div>
       </div>
-      
       <div className="magHead">
-
-    
         <div className="magHeadline">
-          
-          <div className="sm_initial" >J</div>
+          <div className="sm_initial">J</div>
           <div className="magSub">
-          <p>
-            <br />  <b>10 - LOV </b>  </p>
-          
-        </div>
+            <p>
+              <br />  <b>10 - LOV </b>
+            </p>
+            
+          </div>
           <div className="up">
             <div className="sm">
-              <a href="/">UÆN</a>
+              <a href="/">UAN</a>
             </div>
-            <div className="sub">Creative Director</div>
+            <div className="sub">Computer Scientist</div>
           </div>
           <div></div>
         </div>
+        <button className="arrowButton" onClick={toggleComponent}>
+          ➔
+        </button>
       </div>
+      <Description isOpen={isOpen} toggleComponent={toggleComponent} />
+
       <p className="magCaption">
-        - Como hacer el amor escuchando a García, escribí sobre la libertad en épocas donde la monotonía no se esconde. Siento un aire contaminante, la alborada en el cielo, un tango, los vinos con tu abuelo; son esos detalles que nos hacen creer en lo eterno.
+        - No se pongo algo interesante aca como para hacerme el interesante jaja jeje jiji jojo
 <br />
       <strong>_juaem</strong>
       </p>
